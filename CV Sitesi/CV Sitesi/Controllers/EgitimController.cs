@@ -23,10 +23,7 @@ namespace CV_Sitesi.Controllers
         [HttpPost]
         public ActionResult EgitimEkle(TblEgitimlerim p)
         {
-            if (!ModelState.IsValid)
-            {
-                return View("EgitimEkle");
-            }
+
             repo.TAdd(p);
             return RedirectToAction("Index");
         }

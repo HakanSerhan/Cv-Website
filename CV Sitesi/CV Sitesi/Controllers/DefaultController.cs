@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using CV_Sitesi.Models.Entity;
 namespace CV_Sitesi.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         // GET: Default
@@ -14,6 +15,11 @@ namespace CV_Sitesi.Controllers
         {
             var degerler = db.TblHakkimda.ToList();
             return View(degerler);
+        }
+        public PartialViewResult SosyalMedya()
+        {
+            var sosyalmedya = db.TblSosyalMedya.ToList();
+            return PartialView(sosyalmedya);
         }
         public PartialViewResult Deneyim()
         {

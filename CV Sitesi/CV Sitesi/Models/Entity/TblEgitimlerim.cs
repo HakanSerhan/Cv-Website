@@ -11,8 +11,7 @@ namespace CV_Sitesi.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class TblEgitimlerim
     {
         public int ID { get; set; }

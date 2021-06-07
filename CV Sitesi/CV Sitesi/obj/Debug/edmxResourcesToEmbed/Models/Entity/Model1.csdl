@@ -67,6 +67,7 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Tarih" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="TblYeteneklerim">
     <Key>
@@ -85,5 +86,14 @@
     <EntitySet Name="Tbliletisim" EntityType="Self.Tbliletisim" />
     <EntitySet Name="TblSertifikalarım" EntityType="Self.TblSertifikalarım" />
     <EntitySet Name="TblYeteneklerim" EntityType="Self.TblYeteneklerim" />
+    <EntitySet Name="TblSosyalMedya" EntityType="DbCvModel.TblSosyalMedya" />
   </EntityContainer>
+  <EntityType Name="TblSosyalMedya">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Link" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>
